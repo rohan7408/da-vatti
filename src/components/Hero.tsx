@@ -1,25 +1,27 @@
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 pt-16">
+    <section className="min-h-screen bg-gray-700 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-12">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-orange-400 leading-tight">
                 Welcome to{" "}
-                <span className="block text-orange-600">Da Vatti Ashfield</span>
+                <span className="block text-orange-300">Da Vatti Ashfield</span>
               </h1>
 
               <div className="space-y-4 max-w-2xl">
-                <p className="text-xl md:text-2xl font-semibold text-gray-800">
+                <p className="text-xl md:text-2xl font-semibold text-orange-300">
                   Authentic Nepalese Indian Cuisine
                 </p>
 
                 <div className="space-y-2">
-                  <p className="text-lg text-gray-600 flex items-center">
+                  <p className="text-lg text-orange-200 flex items-center">
                     <svg
-                      className="w-5 h-5 text-orange-500 mr-2"
+                      className="w-5 h-5 text-orange-400 mr-2"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -33,13 +35,13 @@ const Hero = () => {
                   </p>
 
                   <div className="flex flex-wrap gap-3 mt-4">
-                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-orange-900 text-orange-200 px-3 py-1 rounded-full text-sm font-medium">
                       Online Menu
                     </span>
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-orange-900 text-orange-200 px-3 py-1 rounded-full text-sm font-medium">
                       Takeaway & Delivery
                     </span>
-                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-orange-900 text-orange-200 px-3 py-1 rounded-full text-sm font-medium">
                       Secure Online Payments
                     </span>
                   </div>
@@ -48,27 +50,20 @@ const Hero = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md">
+              <Link
+                to="/menu"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center border-2 border-orange-500 hover:border-orange-600"
+              >
                 Our Menu
-              </button>
+              </Link>
 
-              <button className="flex items-center justify-center text-orange-500 hover:text-orange-600 px-8 py-4 text-lg font-semibold transition-colors duration-200 group">
-                <div className="flex items-center justify-center w-12 h-12 bg-orange-100 group-hover:bg-orange-200 rounded-full mr-3 transition-colors duration-200">
-                  <svg
-                    className="w-6 h-6 text-orange-500"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                Pre Order Online
-              </button>
+              <Link
+                to="/booking"
+                className="bg-transparent hover:bg-orange-500 text-orange-400 hover:text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center border-2 border-orange-500 hover:border-orange-600"
+              >
+                Book Table
+              </Link>
             </div>
 
             {/* Testimonial */}

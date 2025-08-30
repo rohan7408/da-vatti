@@ -44,7 +44,7 @@ const DeliverySuburbs = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-20 bg-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -58,10 +58,10 @@ const DeliverySuburbs = () => {
               <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z"></path>
             </svg>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-orange-400 mb-4">
             Delivery Areas
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-orange-200 max-w-3xl mx-auto leading-relaxed">
             We bring authentic Nepalese Indian cuisine directly to your door
             across Sydney's inner west and surrounding suburbs
           </p>
@@ -69,7 +69,7 @@ const DeliverySuburbs = () => {
         </div>
 
         {/* Delivery Information Card */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 mb-12 border border-gray-100">
+        <div className="bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 mb-12 border border-gray-600">
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Delivery Stats */}
             <div className="text-center">
@@ -86,8 +86,8 @@ const DeliverySuburbs = () => {
                   ></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">40+</h3>
-              <p className="text-gray-600">Suburbs Covered</p>
+              <h3 className="text-2xl font-bold text-orange-400 mb-2">40+</h3>
+              <p className="text-orange-200">Suburbs Covered</p>
             </div>
 
             <div className="text-center">
@@ -104,8 +104,8 @@ const DeliverySuburbs = () => {
                   ></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">30-45</h3>
-              <p className="text-gray-600">Minutes Delivery</p>
+              <h3 className="text-2xl font-bold text-orange-400 mb-2">30-45</h3>
+              <p className="text-orange-200">Minutes Delivery</p>
             </div>
 
             <div className="text-center">
@@ -123,21 +123,21 @@ const DeliverySuburbs = () => {
                   ></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">$5</h3>
-              <p className="text-gray-600">Delivery Fee</p>
+              <h3 className="text-2xl font-bold text-orange-400 mb-2">$5</h3>
+              <p className="text-orange-200">Delivery Fee</p>
             </div>
           </div>
 
           {/* Suburbs Grid */}
           <div className="mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            <h3 className="text-2xl font-bold text-orange-400 mb-8 text-center">
               We Deliver To These Areas
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
               {deliveryAreas.map((suburb, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg px-4 py-3 text-center border border-orange-100 hover:border-orange-300 hover:shadow-md transition-all duration-200 group"
+                  className="bg-gradient-to-br from-orange-100 to-red-100 rounded-lg px-4 py-3 text-center border border-orange-300 hover:border-orange-500 hover:shadow-md transition-all duration-200 group"
                 >
                   <span className="text-sm font-medium text-gray-800 group-hover:text-orange-700 transition-colors">
                     {suburb}
@@ -148,8 +148,8 @@ const DeliverySuburbs = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center pt-8 border-t border-gray-200">
-            <p className="text-gray-600 mb-6">
+          <div className="text-center pt-8 border-t border-gray-600">
+            <p className="text-orange-200 mb-6">
               Don't see your suburb? Contact us to check if we deliver to your
               area.
             </p>
@@ -173,7 +173,7 @@ const DeliverySuburbs = () => {
               </a>
               <a
                 href="#"
-                className="inline-flex items-center justify-center bg-white hover:bg-gray-50 text-gray-800 px-8 py-3 rounded-lg font-semibold border border-gray-300 hover:border-gray-400 transition-all duration-200"
+                className="inline-flex items-center justify-center bg-gray-600 hover:bg-gray-500 text-orange-200 px-8 py-3 rounded-lg font-semibold border border-gray-500 hover:border-gray-400 transition-all duration-200"
               >
                 <svg
                   className="w-5 h-5 mr-2"

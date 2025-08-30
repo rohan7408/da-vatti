@@ -226,13 +226,13 @@ const Menu = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-900 rounded-full mb-6">
             <svg
-              className="w-8 h-8 text-orange-600"
+              className="w-8 h-8 text-orange-400"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -243,10 +243,10 @@ const Menu = () => {
               ></path>
             </svg>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-orange-400 mb-4">
             Our Menu
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-orange-300 max-w-3xl mx-auto leading-relaxed">
             Discover authentic Nepalese and Indian flavors crafted with
             traditional recipes and the finest ingredients
           </p>
@@ -254,7 +254,7 @@ const Menu = () => {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center mb-12 bg-white rounded-2xl shadow-lg p-2">
+        <div className="flex flex-wrap justify-center mb-12 bg-gray-800 rounded-2xl shadow-lg p-2 border border-gray-600">
           {menuCategories.map((category) => (
             <button
               key={category.id}
@@ -262,7 +262,7 @@ const Menu = () => {
               className={`flex items-center px-6 py-3 m-1 rounded-xl font-semibold transition-all duration-200 ${
                 activeCategory === category.id
                   ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg"
-                  : "text-gray-600 hover:text-orange-500 hover:bg-orange-50"
+                  : "text-orange-300 hover:text-orange-400 hover:bg-gray-700"
               }`}
             >
               <span className="text-lg mr-2">{category.icon}</span>
@@ -277,46 +277,50 @@ const Menu = () => {
             (item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-gray-800 rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-600"
               >
                 {/* Item Image */}
                 <div className="relative h-48 bg-gradient-to-br from-orange-100 to-red-100">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-6xl opacity-50">🍽️</div>
                   </div>
-                  {item.popular && (
-                    <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      Popular
-                    </div>
-                  )}
-                  {item.vegetarian && (
-                    <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      Vegetarian
-                    </div>
-                  )}
+                  <div className="absolute top-4 left-4 right-4 flex justify-between items-start gap-2">
+                    {item.popular && (
+                      <div className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold shrink-0">
+                        Popular
+                      </div>
+                    )}
+                    {item.vegetarian && (
+                      <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold shrink-0">
+                        Vegetarian
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* Item Content */}
                 <div className="p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {item.name}
-                    </h3>
-                    <div className="flex items-center space-x-2">
+                  <div className="mb-3">
+                    <div className="flex items-start justify-between gap-4 mb-2">
+                      <h3 className="text-xl font-bold text-orange-400 flex-1 min-w-0 line-clamp-2">
+                        {item.name}
+                      </h3>
                       {item.spicy > 0 && (
-                        <span className="text-xs">
-                          {getSpicyLevel(item.spicy)}
-                        </span>
+                        <div className="flex items-center shrink-0">
+                          <span className="text-xs text-orange-300">
+                            {getSpicyLevel(item.spicy)}
+                          </span>
+                        </div>
                       )}
                     </div>
                   </div>
 
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  <p className="text-orange-200 text-sm leading-relaxed mb-4 line-clamp-3">
                     {item.description}
                   </p>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-orange-600">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="text-2xl font-bold text-orange-600 shrink-0">
                       {item.price}
                     </span>
                     <button
@@ -330,7 +334,7 @@ const Menu = () => {
                           category: activeCategory,
                         })
                       }
-                      className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                      className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border-2 border-orange-500 hover:border-orange-600 shrink-0"
                     >
                       Add to Cart
                     </button>
@@ -354,7 +358,7 @@ const Menu = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border-2 border-orange-500 hover:border-orange-600"
               >
                 <svg
                   className="w-5 h-5 mr-2"
@@ -371,7 +375,7 @@ const Menu = () => {
               </a>
               <a
                 href="#"
-                className="inline-flex items-center justify-center bg-white hover:bg-gray-50 text-gray-800 px-8 py-4 rounded-lg font-semibold border border-gray-300 hover:border-gray-400 transition-all duration-200"
+                className="inline-flex items-center justify-center bg-transparent hover:bg-orange-500 text-orange-400 hover:text-white px-8 py-4 rounded-xl font-bold border-2 border-orange-500 hover:border-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 <svg
                   className="w-5 h-5 mr-2"

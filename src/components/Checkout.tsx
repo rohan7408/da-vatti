@@ -50,11 +50,11 @@ const Checkout = () => {
 
   if (cartItems.length === 0 && !orderComplete) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 pt-24 pb-12 flex items-center justify-center px-4">
-        <div className="max-w-md mx-auto text-center p-8 bg-white rounded-2xl shadow-xl">
-          <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+      <div className="min-h-screen bg-gray-700 pt-24 pb-12 flex items-center justify-center px-4">
+        <div className="max-w-md mx-auto text-center p-8 bg-gray-800 rounded-2xl shadow-xl border border-gray-600">
+          <div className="w-24 h-24 bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg
-              className="w-12 h-12 text-orange-500"
+              className="w-12 h-12 text-orange-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -67,15 +67,15 @@ const Checkout = () => {
               />
             </svg>
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-orange-400 mb-4">
             Your cart is empty
           </h2>
-          <p className="text-gray-600 mb-8 text-lg">
+          <p className="text-orange-300 mb-8 text-lg">
             Add some delicious items to your cart before checking out.
           </p>
           <Link
             to="/menu"
-            className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl border-2 border-orange-500 hover:border-orange-600"
           >
             <svg
               className="w-5 h-5 mr-2"
@@ -99,11 +99,11 @@ const Checkout = () => {
 
   if (orderComplete) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 pt-24 pb-12 flex items-center justify-center px-4">
-        <div className="max-w-lg mx-auto text-center p-8 bg-white rounded-2xl shadow-xl">
-          <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
+      <div className="min-h-screen bg-gray-700 pt-24 pb-12 flex items-center justify-center px-4">
+        <div className="max-w-lg mx-auto text-center p-8 bg-gray-800 rounded-2xl shadow-xl border border-gray-600">
+          <div className="w-24 h-24 bg-green-900 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
             <svg
-              className="w-12 h-12 text-green-500"
+              className="w-12 h-12 text-green-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -116,25 +116,25 @@ const Checkout = () => {
               />
             </svg>
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-orange-400 mb-4">
             Order Confirmed! 🎉
           </h2>
-          <p className="text-gray-600 mb-4 text-lg">
+          <p className="text-orange-300 mb-4 text-lg">
             Thank you for choosing Da Vatti Ashfield!
           </p>
-          <p className="text-gray-500 mb-8">
+          <p className="text-orange-200 mb-8">
             We'll send you a confirmation email with tracking details shortly.
           </p>
           <div className="space-y-4">
             <Link
               to="/menu"
-              className="block w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105"
+              className="block w-full bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl border-2 border-orange-500 hover:border-orange-600"
             >
               Order Again
             </Link>
             <Link
               to="/"
-              className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-800 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
+              className="block w-full bg-transparent hover:bg-orange-500 text-orange-400 hover:text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 border-2 border-orange-500 hover:border-orange-600 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Back to Home
             </Link>
@@ -145,15 +145,15 @@ const Checkout = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-orange-50 pt-24 pb-12">
+    <div className="min-h-screen bg-gray-700 pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl font-bold text-orange-400 mb-6 leading-tight">
               Complete Your Order
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-orange-300 leading-relaxed">
               Almost there! Just a few more details needed.
             </p>
           </div>
@@ -162,11 +162,11 @@ const Checkout = () => {
             {/* Order Form - Takes 2 columns */}
             <div className="lg:col-span-2 space-y-10">
               {/* Order Type */}
-              <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-                  <span className="bg-orange-100 rounded-full p-2 mr-3">
+              <div className="bg-gray-800 rounded-2xl shadow-lg p-8 border border-gray-600">
+                <h2 className="text-2xl font-semibold text-orange-400 mb-6 flex items-center">
+                  <span className="bg-orange-900 rounded-full p-2 mr-3">
                     <svg
-                      className="w-6 h-6 text-orange-600"
+                      className="w-6 h-6 text-orange-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -527,7 +527,7 @@ const Checkout = () => {
                 <button
                   type="submit"
                   disabled={isProcessing}
-                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 disabled:from-gray-400 disabled:to-gray-500 text-white py-6 px-8 rounded-2xl font-bold text-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 disabled:transform-none disabled:shadow-lg"
+                  className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white py-6 px-8 rounded-xl font-bold text-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 disabled:transform-none disabled:shadow-lg border-2 border-orange-500 hover:border-orange-600 disabled:border-gray-600"
                 >
                   {isProcessing ? (
                     <div className="flex items-center justify-center">

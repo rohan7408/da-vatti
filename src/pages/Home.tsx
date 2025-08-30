@@ -9,7 +9,7 @@ import {
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-gray-700 min-h-screen">
       <Hero />
       <TopSellers />
       <OperatingHours />

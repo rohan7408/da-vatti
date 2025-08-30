@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+/* Dark theme global styles */
+body {
+  background-color: #374151; /* Dark grey background */
+  color: #fb923c; /* Orange text color */
+}
+
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
+  background-color: #374151; /* Dark grey background */
 }
 
 /* Ensure smooth scrolling works well with fixed navbar */
@@ -30,4 +37,35 @@ body {
 
 .animate-slideInRight {
   animation: slideInRight 0.3s ease-out;
+}
+
+/* Text overflow and line clamping utilities */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Prevent text overflow in flex containers */
+.text-ellipsis-flex {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Ensure proper spacing in card layouts */
+.card-content {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }

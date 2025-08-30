@@ -86,14 +86,14 @@ const Reviews = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-orange-400 mb-4">
             Customer Reviews
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-orange-200 max-w-2xl mx-auto mb-8">
             See what our valued customers are saying about their dining
             experience
           </p>
@@ -101,19 +101,19 @@ const Reviews = () => {
         </div>
 
         {/* Reviews Summary */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 mb-12">
+        <div className="bg-gray-800 rounded-3xl shadow-xl p-8 mb-12 border border-gray-600">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Overall Rating */}
             <div className="text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start mb-4">
-                <span className="text-6xl font-bold text-gray-900 mr-4">
+                <span className="text-6xl font-bold text-orange-400 mr-4">
                   {averageRating}
                 </span>
                 <div>
                   <div className="flex mb-2">
                     {renderStars(Math.round(parseFloat(averageRating)))}
                   </div>
-                  <p className="text-gray-600 text-lg">
+                  <p className="text-orange-200 text-lg">
                     Based on {totalReviews} reviews
                   </p>
                 </div>
@@ -130,7 +130,7 @@ const Reviews = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span className="text-green-600 font-semibold">
+                <span className="text-green-400 font-semibold">
                   Verified Reviews
                 </span>
               </div>
@@ -140,7 +140,7 @@ const Reviews = () => {
             <div className="space-y-3">
               {[5, 4, 3, 2, 1].map((rating, index) => (
                 <div key={rating} className="flex items-center">
-                  <span className="text-sm font-medium text-gray-700 w-3">
+                  <span className="text-sm font-medium text-orange-200 w-3">
                     {rating}
                   </span>
                   <svg
@@ -151,7 +151,7 @@ const Reviews = () => {
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                   <div className="flex-1 mx-2">
-                    <div className="bg-gray-200 rounded-full h-2">
+                    <div className="bg-gray-600 rounded-full h-2">
                       <div
                         className="bg-yellow-400 h-2 rounded-full"
                         style={{
@@ -162,7 +162,7 @@ const Reviews = () => {
                       ></div>
                     </div>
                   </div>
-                  <span className="text-sm text-gray-600 w-8">
+                  <span className="text-sm text-orange-200 w-8">
                     {ratingDistribution[index]}
                   </span>
                 </div>
@@ -176,7 +176,7 @@ const Reviews = () => {
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-orange-200"
+              className="bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-600 hover:border-orange-400"
             >
               {/* Review Header */}
               <div className="flex items-center mb-4">
@@ -187,7 +187,7 @@ const Reviews = () => {
                 />
                 <div className="flex-1">
                   <div className="flex items-center">
-                    <h4 className="font-semibold text-gray-900 mr-2">
+                    <h4 className="font-semibold text-orange-400 mr-2">
                       {review.name}
                     </h4>
                     {review.verified && (
@@ -204,7 +204,7 @@ const Reviews = () => {
                       </svg>
                     )}
                   </div>
-                  <p className="text-sm text-gray-500">{review.date}</p>
+                  <p className="text-sm text-orange-200">{review.date}</p>
                 </div>
               </div>
 
@@ -212,14 +212,14 @@ const Reviews = () => {
               <div className="flex mb-4">{renderStars(review.rating)}</div>
 
               {/* Review Text */}
-              <p className="text-gray-700 leading-relaxed text-sm mb-4">
+              <p className="text-orange-200 leading-relaxed text-sm mb-4">
                 "{review.review}"
               </p>
 
               {/* Review Actions */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                <div className="flex items-center space-x-4 text-sm text-gray-500">
-                  <button className="flex items-center hover:text-orange-500 transition-colors">
+              <div className="flex items-center justify-between pt-4 border-t border-gray-600">
+                <div className="flex items-center space-x-4 text-sm text-orange-200">
+                  <button className="flex items-center hover:text-orange-400 transition-colors">
                     <svg
                       className="w-4 h-4 mr-1"
                       fill="none"
@@ -235,7 +235,7 @@ const Reviews = () => {
                     </svg>
                     Helpful
                   </button>
-                  <button className="flex items-center hover:text-orange-500 transition-colors">
+                  <button className="flex items-center hover:text-orange-400 transition-colors">
                     <svg
                       className="w-4 h-4 mr-1"
                       fill="none"
@@ -259,12 +259,12 @@ const Reviews = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white">
+          <div className="bg-orange-500 rounded-2xl p-8 text-white shadow-lg">
             <h3 className="text-2xl font-bold mb-4">Share Your Experience</h3>
             <p className="text-lg mb-6 opacity-90">
               Had a great meal? We'd love to hear about your experience!
             </p>
-            <button className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <button className="bg-white text-orange-500 hover:bg-orange-100 px-10 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border-2 border-white hover:border-orange-100">
               Write a Review
             </button>
           </div>
